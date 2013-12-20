@@ -1,0 +1,25 @@
+Source: rt-extension-customfieldsonupdate
+Section: perl
+Priority: optional
+Maintainer: KURASHIKI Satoru <lurdan@gmail.com>
+Build-Depends: debhelper (>= 9.20120312)
+Build-Depends-Indep: perl
+Standards-Version: 3.9.5
+Vcs-Git: https://github.com/lurdan/rt-extension-customfieldsonupdate.git
+Vcs-Browser: https://github.com/lurdan/rt-extension-customfieldsonupdate/tree/dpkg
+Homepage: https://metacpan.org/release/RT-Extension-CustomFieldsOnUpdate
+
+Package: rt4-extension-customfieldsonupdate
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends}
+ request-tracker4,
+ perl
+Description: edit ticket's custom fields on reply/comment
+ This extension adds often requested feature - update of ticket's custom
+ fields on reply and comment.
+ .
+ This is for RT 4.0.x, solutions for older versions available on the wiki,
+ start from CustomFieldsOnUpdate page [1].
+ .
+ [1] http://requesttracker.wikia.com/wiki/CustomFieldsOnUpdate
+

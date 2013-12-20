@@ -1,0 +1,5 @@
+rt-extension-customfieldsonupdate (0.01-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #732665)
+
+ -- KURASHIKI Satoru <lurdan@gmail.com>  Fri, 20 Dec 2013 11:44:01 +0900
