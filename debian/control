@@ -11,7 +11,7 @@ Homepage: https://metacpan.org/release/RT-Extension-CustomFieldsOnUpdate
 
 Package: rt4-extension-customfieldsonupdate
 Architecture: all
-Depends: ${misc:Depends}, ${perl:Depends}
+Depends: ${misc:Depends}, ${perl:Depends},
  request-tracker4,
  perl
 Description: edit ticket's custom fields on reply/comment
