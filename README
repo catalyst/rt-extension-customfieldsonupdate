@@ -3,35 +3,48 @@ NAME
     reply/comment
 
 DESCRIPTION
-    This extension adds often requested feature - update of ticket's custom
-    fields on reply and comment.
-
-    This is for RT 4.0.x, solutions for older versions available on the
-    wiki, start from CustomFieldsOnUpdate page [1].
-
-    [1] http://requesttracker.wikia.com/wiki/CustomFieldsOnUpdate
+    This extension allows the update of tickets' custom fields on reply and
+    comment pages.
 
 INSTALLATION
-    It's sad but RT 4.0.0 - 4.0.2 miss a tiny feature, so you have to apply
-    patches/RT-4.0.0-2-edit-ticket-custom-fields-in-table.patch. This change
-    is part of RT 4.0.3.
+    perl Makefile.PL
+    make
+    make install
+        May need root permissions
 
-    Otherwise installation is common:
+    Edit your /opt/rt4/etc/RT_SiteConfig.pm
+        If you are using RT 4.2 or greater, add this line:
 
-        perl Makefile.PL
-        make
-        make install
+            Plugin('RT::Extension::CustomFieldsOnUpdate');
 
-    Register 'RT::Extension::CustomFieldsOnUpdate' in the site config;
+        For RT 4.0, add this line:
 
-        Set(@Plugins, qw(
-            RT::Extension::CustomFieldsOnUpdate
-            ... other plugins you may have ...
-        ));
+            Set(@Plugins, qw(RT::Extension::CustomFieldsOnUpdate));
+
+        or add RT::Extension::CustomFieldsOnUpdate to your existing @Plugins
+        line.
+
+    Clear your mason cache
+            rm -rf /opt/rt4/var/mason_data/obj
+
+    Restart your webserver
 
 AUTHOR
-    Ruslan Zakirov <ruz@bestpractical.com>
+    Best Practical Solutions, LLC <modules@bestpractical.com>
 
-LICENSE
-    Under the same terms as perl itself.
+BUGS
+    All bugs should be reported via email to
+
+        L<bug-RT-Extension-CustomFieldsOnUpdate@rt.cpan.org|mailto:bug-RT-Extension-CustomFieldsOnUpdate@rt.cpan.org>
+
+    or via the web at
+
+        L<rt.cpan.org|http://rt.cpan.org/Public/Dist/Display.html?Name=RT-Extension-CustomFieldsOnUpdate>.
+
+LICENSE AND COPYRIGHT
+    This software is Copyright (c) 2014 by Best Practical Solutions
+
+    This is free software, licensed under:
+
+      The GNU General Public License, Version 2, June 1991
 
