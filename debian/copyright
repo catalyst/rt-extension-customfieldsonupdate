@@ -4,11 +4,11 @@ Upstream-Contact: Ruslan Zakirov <ruz@bestpractical.com>
 Upstream-Name: RT-Extension-CustomFieldsOnUpdate
 
 Files: *
-Copyright: 2009-2013, Best Practical Solutions, Ruslan Zakirov <ruz@bestpractical.com>
+Copyright: 2009-2015, Best Practical Solutions, Ruslan Zakirov <ruz@bestpractical.com>
 License: Artistic or GPL-1+
 
 Files: debian/*
-Copyright: 2013, KURASHIKI Satoru <lurdan@gmail.com>
+Copyright: 2015, KURASHIKI Satoru <lurdan@gmail.com>
 License: Artistic or GPL-1+
 
 License: Artistic
