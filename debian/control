@@ -1,12 +1,14 @@
 Source: rt-extension-customfieldsonupdate
 Section: perl
 Priority: optional
-Maintainer: KURASHIKI Satoru <lurdan@gmail.com>
+Maintainer: Debian Request Tracker Group <pkg-request-tracker-maintainers@lists.alioth.debian.org>
+Uploaders: KURASHIKI Satoru <lurdan@gmail.com>
 Build-Depends: debhelper (>= 9.20120312)
 Build-Depends-Indep: perl
-Standards-Version: 3.9.5
-Vcs-Git: https://github.com/lurdan/rt-extension-customfieldsonupdate.git
-Vcs-Browser: https://github.com/lurdan/rt-extension-customfieldsonupdate/tree/dpkg
+ , libmodule-install-rtx-perl
+Standards-Version: 3.9.6
+Vcs-Git: git://anonscm.debian.org/pkg-request-tracker/rt-extension-customfieldsonupdate.git
+Vcs-Browser: http://anonscm.debian.org/cgit/pkg-request-tracker/rt-extension-customfieldsonupdate.git
 Homepage: https://metacpan.org/release/RT-Extension-CustomFieldsOnUpdate
 
 Package: rt4-extension-customfieldsonupdate
