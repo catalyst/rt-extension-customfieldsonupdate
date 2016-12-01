@@ -9,7 +9,7 @@ override_dh_auto_configure:
 	rm -rf inc/Module
 	for ver in $(RT_VERSIONS); do \
 	 export RTHOME=/usr/share/request-tracker$$ver; \
-	 perl Makefile.PL INSTALLDIRS=vendor; \
+	 perl -I. Makefile.PL INSTALLDIRS=vendor NO_PACKLIST=1; \
 	 mv Makefile Makefile$$ver; \
 	done
 
