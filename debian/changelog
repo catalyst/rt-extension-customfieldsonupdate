@@ -1,10 +1,20 @@
-rt-extension-customfieldsonupdate (1.01-1) unstable; urgency=medium
+rt-extension-customfieldsonupdate (1.02-1) unstable; urgency=medium
 
   * New upstream release.
-  * New Standards-Version: 3.9.6
+  * New Standards-Version: 3.9.8
   * Depends on libmodule-install-rtx-perl.
+  * Try to make its build reproducible (Closes: #835816)
 
- -- KURASHIKI Satoru <lurdan@gmail.com>  Thu, 09 Jul 2015 19:59:27 +0900
+ -- KURASHIKI Satoru <lurdan@gmail.com>  Thu, 01 Dec 2016 20:42:27 +0900
+
+rt-extension-customfieldsonupdate (0.01-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix "FTBFS with '.' removed from perl's @INC":
+    call perl with "-I." in debian/rules.
+    (Closes: #834354)
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 21 Aug 2016 21:08:05 +0200
 
 rt-extension-customfieldsonupdate (0.01-1) unstable; urgency=low
 

@@ -6,9 +6,9 @@ Uploaders: KURASHIKI Satoru <lurdan@gmail.com>
 Build-Depends: debhelper (>= 9.20120312)
 Build-Depends-Indep: perl
  , libmodule-install-rtx-perl
-Standards-Version: 3.9.6
-Vcs-Git: git://anonscm.debian.org/pkg-request-tracker/rt-extension-customfieldsonupdate.git
-Vcs-Browser: http://anonscm.debian.org/cgit/pkg-request-tracker/rt-extension-customfieldsonupdate.git
+Standards-Version: 3.9.8
+Vcs-Git: https://anonscm.debian.org/git/pkg-request-tracker/rt-extension-customfieldsonupdate.git -b dpkg
+Vcs-Browser: https://anonscm.debian.org/git/pkg-request-tracker/rt-extension-customfieldsonupdate.git?h=dpkg
 Homepage: https://metacpan.org/release/RT-Extension-CustomFieldsOnUpdate
 
 Package: rt4-extension-customfieldsonupdate
