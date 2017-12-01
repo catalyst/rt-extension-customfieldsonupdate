@@ -1,28 +1,19 @@
 #!/usr/bin/make -f
 
-RT_VERSIONS=4
+# This is to turn on verbose mode.
+# export DH_VERBOSE=1
+
+RTHOME=/usr/share/request-tracker4
 
 %:
 	dh $@
-
-override_dh_auto_configure:
-	rm -rf inc/Module
-	for ver in $(RT_VERSIONS); do \
-	 export RTHOME=/usr/share/request-tracker$$ver; \
-	 perl -I. Makefile.PL INSTALLDIRS=vendor NO_PACKLIST=1; \
-	 mv Makefile Makefile$$ver; \
-	done
 
 override_dh_auto_build:
 
 override_dh_auto_test:
 
-override_dh_auto_install:
-	for ver in $(RT_VERSIONS); do \
-	 ln -sf Makefile$$ver Makefile; \
-	 export PERL_INSTALL_ROOT=$(CURDIR)/debian/rt$$ver-extension-customfieldsonupdate; \
-	 make install; \
-        done
+# don't run the dh auto install command (we use debian/install)
+override_dh_auto_install-indep:
 
 override_dh_auto_clean:
 	dh_auto_clean
